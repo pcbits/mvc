@@ -1,0 +1,16 @@
+{
+    "name": "pcbits/mvc",
+    "description": "Simple PHP MVC Framework",
+    "type": "framework",
+    "minimum-stability": "stable",
+    "require": {
+        "php" : ">=5.5.0",
+        "nikic/fast-route": "^1.2",
+        "vlucas/phpdotenv": "^2.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "MVC\\": "src/MVC/"
+        }
+    }
+}
