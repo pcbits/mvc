@@ -18,3 +18,15 @@ rm -fr mvc*
 composer install
 edit file .env
 ```
+
+# Apache
+Set the www root to the public folder and there is a .htaccess file in the zip.
+
+# NGINX
+Under the server config for the site point the www root to the public folder.
+Setup PHP FastCGI and the location rules look similar to this:
+```
+location / {
+  try_files $uri $uri/ /index.php/$uri$is_args$args;
+}
+```
