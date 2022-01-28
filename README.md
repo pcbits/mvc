@@ -4,7 +4,7 @@
 * Allow the use of SQL.
 * Hydrated models.
 * Can run on old PHP 5.6 or newer versions allowing you to host anywhere.
-* Allow the use of composer for the use of others code.
+* Allow the use of composer to have access to others code.
 * Reuse others code when appropriate (no need to reinvent the wheel).
 
 # Setup New Project
