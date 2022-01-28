@@ -16,4 +16,5 @@ mv mvc/* .
 mv mvc/.* .
 rm -fr mvc*
 composer install
+edit file .env
 ```
