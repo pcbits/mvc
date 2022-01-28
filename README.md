@@ -3,7 +3,7 @@
 * Simple ORM with easy access to related tables.
 * Allow the use of SQL.
 * Hydrated models.
-* Can run on oldish(PHP 5.6) or newer versions of PHP (host anywhere).
+* Can run on old PHP 5.6 or newer versions allowing you to host anywhere.
 * Allow the use of composer for the use of others code.
 * Reuse others code when appropriate (no need to reinvent the wheel).
 
