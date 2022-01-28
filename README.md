@@ -20,10 +20,10 @@ edit file .env
 ```
 
 # Apache
-Set the www root to the public folder and there is a .htaccess file in the zip.
+Set the www root to the "public" folder and there is a .htaccess file in the zip.
 
 # NGINX
-Under the server config for the site point the www root to the public folder.
+Under the server config for the site point the www root to the "public" folder.
 Setup PHP FastCGI and the location rules look similar to this:
 ```
 location / {
