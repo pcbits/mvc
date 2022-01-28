@@ -10,7 +10,7 @@
 # Setup New Project
 Rough instructions on how to setup a new project.
 ```
-Setup download mvc.zip
+download mvc.zip
 unzip mvc.zip 
 mv mvc/* .
 mv mvc/.* .
