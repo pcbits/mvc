@@ -211,6 +211,9 @@ abstract class Model
                 $stm = $this->db->prepare($s);
                 $stm->execute($p);
                 $id = $this->db->lastInsertId();
+                if (is_numeric($id)) {
+                    $id = intval($id);
+                }
                 $r = $id;
                 $this->$pk = $id;
             } else {
