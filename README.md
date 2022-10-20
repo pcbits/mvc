@@ -45,7 +45,7 @@ Creating matching table with plural snake_case name and column names camelCase. 
 CREATE TABLE motor_boats (id int(11) NOT NULL AUTO_INCREMENT, hullLength int(11) NOT NULL, PRIMARY KEY(id));
 ```
 
-#Controllers
+# Controllers
 ## Naming Conventions
 Create controller class names PascalCase and must be singular.
 ```
