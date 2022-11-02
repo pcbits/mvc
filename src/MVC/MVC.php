@@ -74,7 +74,7 @@ class MVC
         $this->settings[$name] = $value;
     }
 
-    protected function routes()
+    public function routes()
     {
         $paths = [
             './',
