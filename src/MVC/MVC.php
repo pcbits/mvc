@@ -88,6 +88,26 @@ class MVC
         }
     }
 
+    public function httpGetRoutes()
+    {
+        $r = $this->routes();
+        $loader = static function () use ($r): array {
+            $d = new \FastRoute\DataGenerator\MarkBased();
+            $routeCollector = new \FastRoute\RouteCollector(
+                new \FastRoute\RouteParser\Std(),
+                $d
+            );
+            assert($routeCollector instanceof RouteCollector);
+            $r($routeCollector);
+            return $d->getData();
+        };
+        $data = $loader();
+        if (!empty($data[0]['GET'])) {
+            return array_keys($data[0]['GET']);
+        }
+        return null;
+    }
+    
     public function page404()
     {
         $this->errorPage('404');
