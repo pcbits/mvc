@@ -1,7 +1,6 @@
 <?php
 namespace MVC;
 
-use Dotenv\Dotenv;
 use MVC\View;
 use MVC\DB;
 use MVC\Redis;
@@ -25,11 +24,12 @@ class MVC
             foreach ($configPaths as $path) {
                 $file = $path . 'config.php';
                 if (is_file($file)) {
-                    $dotenv = new Dotenv($path);
-                    $dotenv->overload();
+                    $env = parse_ini_file($path . '/.env');
+                    foreach($env as $key=>$val) {
+                        putenv("$key=$val");
+                    }
                     $this->settings = include $file;
                     $this->settings['configFile'] = $file;
-                    $dotenv = null;
                     break;
                 }
             }
