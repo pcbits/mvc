@@ -5,8 +5,7 @@
     "minimum-stability": "stable",
     "require": {
         "php" : ">=5.5.0",
-        "nikic/fast-route": "^1.2",
-        "vlucas/phpdotenv": "^2.4"
+        "nikic/fast-route": "^1.2"
     },
     "autoload": {
         "psr-4": {
