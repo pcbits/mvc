@@ -20,8 +20,8 @@ abstract class Controller
         $this->mvc = $mvc;
         $this->url = $mvc->get('url');
         $this->params = $params;
-        $this->post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
-        $this->get = filter_input_array(INPUT_GET, FILTER_SANITIZE_STRING);
+        $this->post = filter_input_array(INPUT_POST, FILTER_UNSAFE_RAW);
+        $this->get = filter_input_array(INPUT_GET, FILTER_UNSAFE_RAW);
     }
 
     protected function render($file, array $vars = [])
